@@ -23,6 +23,40 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public class MainImpl extends MinimalEObjectImpl.Container implements Main {
+	
+	public static void main(String[] args) {
+//		DatabaseUtilsImpl dbutil = new DatabaseUtilsImpl();
+//		UtilsImpl util = new UtilsImpl();
+//		dbutil.addStore();
+//		dbutil.updateStore();
+//		dbutil.addEmployee();
+//		dbutil.UpdateEmployee();
+//		
+//		ManagerImpl mngr = new ManagerImpl();
+//		mngr.setRole("Manager");
+//		mngr.setId(1123);
+//		System.out.println(mngr.getId());
+//		mngr.setName("Harsha");
+//		System.out.println(mngr.getName());
+//		mngr.getProductLocation();
+		EmployeeImpl emp = new EmployeeImpl();
+		
+		
+		
+		CashierImpl cas = new CashierImpl();
+		emp = cas;
+		emp.setRole("Cashier");
+		cas.setId(1123);
+		System.out.println(cas.getId());
+		cas.setName("Harsha");
+		System.out.println(cas.getName());
+//		cas.getCarts().add(CartImpl());
+		
+		System.out.println("THe prog runs");	}
+	
+	
+	
+	
 	/**
 	 * The default value of the '{@link #getCurrEmployee() <em>Curr Employee</em>}' attribute.
 	 * <!-- begin-user-doc -->

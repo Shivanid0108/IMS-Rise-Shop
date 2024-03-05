@@ -84,26 +84,6 @@ public class RiseAndShopAdapterFactory extends AdapterFactoryImpl {
 				return createEmployeeAdapter();
 			}
 			@Override
-			public Adapter caseCart(Cart object) {
-				return createCartAdapter();
-			}
-			@Override
-			public Adapter caseCartItem(CartItem object) {
-				return createCartItemAdapter();
-			}
-			@Override
-			public Adapter casePayment(Payment object) {
-				return createPaymentAdapter();
-			}
-			@Override
-			public Adapter caseReview(Review object) {
-				return createReviewAdapter();
-			}
-			@Override
-			public Adapter caseNotification(Notification object) {
-				return createNotificationAdapter();
-			}
-			@Override
 			public Adapter caseInventory(Inventory object) {
 				return createInventoryAdapter();
 			}
@@ -124,12 +104,48 @@ public class RiseAndShopAdapterFactory extends AdapterFactoryImpl {
 				return createEventAdapter();
 			}
 			@Override
+			public Adapter caseNotification(Notification object) {
+				return createNotificationAdapter();
+			}
+			@Override
+			public Adapter caseCart(Cart object) {
+				return createCartAdapter();
+			}
+			@Override
+			public Adapter caseCartItem(CartItem object) {
+				return createCartItemAdapter();
+			}
+			@Override
+			public Adapter casePayment(Payment object) {
+				return createPaymentAdapter();
+			}
+			@Override
+			public Adapter caseReview(Review object) {
+				return createReviewAdapter();
+			}
+			@Override
 			public Adapter caseSalary(Salary object) {
 				return createSalaryAdapter();
 			}
 			@Override
 			public Adapter caseUtils(Utils object) {
 				return createUtilsAdapter();
+			}
+			@Override
+			public Adapter caseSuperviser(Superviser object) {
+				return createSuperviserAdapter();
+			}
+			@Override
+			public Adapter caseTeamLeader(TeamLeader object) {
+				return createTeamLeaderAdapter();
+			}
+			@Override
+			public Adapter caseCashier(Cashier object) {
+				return createCashierAdapter();
+			}
+			@Override
+			public Adapter caseManager(Manager object) {
+				return createManagerAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -358,6 +374,62 @@ public class RiseAndShopAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUtilsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RiseAndShop.Superviser <em>Superviser</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RiseAndShop.Superviser
+	 * @generated
+	 */
+	public Adapter createSuperviserAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RiseAndShop.TeamLeader <em>Team Leader</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RiseAndShop.TeamLeader
+	 * @generated
+	 */
+	public Adapter createTeamLeaderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RiseAndShop.Cashier <em>Cashier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RiseAndShop.Cashier
+	 * @generated
+	 */
+	public Adapter createCashierAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link RiseAndShop.Manager <em>Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see RiseAndShop.Manager
+	 * @generated
+	 */
+	public Adapter createManagerAdapter() {
 		return null;
 	}
 

@@ -4,12 +4,14 @@ package RiseAndShop.impl;
 
 import RiseAndShop.Cart;
 import RiseAndShop.CartItem;
+import RiseAndShop.Cashier;
 import RiseAndShop.Categories;
 import RiseAndShop.DatabaseUtils;
 import RiseAndShop.Employee;
 import RiseAndShop.Event;
 import RiseAndShop.Inventory;
 import RiseAndShop.Main;
+import RiseAndShop.Manager;
 import RiseAndShop.Notification;
 import RiseAndShop.Payment;
 import RiseAndShop.Product;
@@ -19,7 +21,9 @@ import RiseAndShop.RiseAndShopPackage;
 import RiseAndShop.Salary;
 import RiseAndShop.Store;
 
+import RiseAndShop.Superviser;
 import RiseAndShop.Supplier;
+import RiseAndShop.TeamLeader;
 import RiseAndShop.Utils;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -142,6 +146,34 @@ public class RiseAndShopPackageImpl extends EPackageImpl implements RiseAndShopP
 	 * @generated
 	 */
 	private EClass utilsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass superviserEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass teamLeaderEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cashierEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass managerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -351,116 +383,6 @@ public class RiseAndShopPackageImpl extends EPackageImpl implements RiseAndShopP
 	@Override
 	public EAttribute getEmployee_Role() {
 		return (EAttribute)employeeEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEmployee_Carts() {
-		return (EReference)employeeEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getEmployee_Notifications() {
-		return (EReference)employeeEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmployee__GetProductLocation() {
-		return employeeEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmployee__GetStockDetails() {
-		return employeeEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmployee__UpdateProductQuantity() {
-		return employeeEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmployee__UpdateCategory() {
-		return employeeEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmployee__AddNewProduct() {
-		return employeeEClass.getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmployee__UpdateProduct() {
-		return employeeEClass.getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmployee__DeleteProduct() {
-		return employeeEClass.getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmployee__GetSalesDetails() {
-		return employeeEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EOperation getEmployee__NotifyLowStock() {
-		return employeeEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -899,6 +821,146 @@ public class RiseAndShopPackageImpl extends EPackageImpl implements RiseAndShopP
 	 * @generated
 	 */
 	@Override
+	public EClass getSuperviser() {
+		return superviserEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getSuperviser__UpdateProduct() {
+		return superviserEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getSuperviser__AddNewProduct() {
+		return superviserEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getSuperviser__DeleteProduct() {
+		return superviserEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getSuperviser__GetStockDetails() {
+		return superviserEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getTeamLeader() {
+		return teamLeaderEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTeamLeader_Notifications() {
+		return (EReference)teamLeaderEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCashier() {
+		return cashierEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCashier_Carts() {
+		return (EReference)cashierEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getCashier__NotifyLowStock() {
+		return cashierEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getManager() {
+		return managerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getManager__GetProductLocation() {
+		return managerEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getManager__UpdateCategory() {
+		return managerEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EOperation getManager__GetSalesDetails() {
+		return managerEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getDatabaseUtils() {
 		return databaseUtilsEClass;
 	}
@@ -1038,41 +1100,6 @@ public class RiseAndShopPackageImpl extends EPackageImpl implements RiseAndShopP
 		createEAttribute(employeeEClass, EMPLOYEE__USERNAME);
 		createEAttribute(employeeEClass, EMPLOYEE__PASSWORD);
 		createEAttribute(employeeEClass, EMPLOYEE__ROLE);
-		createEReference(employeeEClass, EMPLOYEE__CARTS);
-		createEReference(employeeEClass, EMPLOYEE__NOTIFICATIONS);
-		createEOperation(employeeEClass, EMPLOYEE___GET_PRODUCT_LOCATION);
-		createEOperation(employeeEClass, EMPLOYEE___GET_STOCK_DETAILS);
-		createEOperation(employeeEClass, EMPLOYEE___UPDATE_PRODUCT_QUANTITY);
-		createEOperation(employeeEClass, EMPLOYEE___UPDATE_CATEGORY);
-		createEOperation(employeeEClass, EMPLOYEE___ADD_NEW_PRODUCT);
-		createEOperation(employeeEClass, EMPLOYEE___UPDATE_PRODUCT);
-		createEOperation(employeeEClass, EMPLOYEE___DELETE_PRODUCT);
-		createEOperation(employeeEClass, EMPLOYEE___GET_SALES_DETAILS);
-		createEOperation(employeeEClass, EMPLOYEE___NOTIFY_LOW_STOCK);
-
-		cartEClass = createEClass(CART);
-		createEAttribute(cartEClass, CART__CART_ID);
-		createEAttribute(cartEClass, CART__CUSTOMER_ID);
-		createEReference(cartEClass, CART__PRODUCTS);
-		createEReference(cartEClass, CART__PAYMENT_ISSUED);
-		createEReference(cartEClass, CART__REVIEW);
-
-		cartItemEClass = createEClass(CART_ITEM);
-		createEAttribute(cartItemEClass, CART_ITEM__NAME);
-		createEAttribute(cartItemEClass, CART_ITEM__QUANTITY);
-
-		paymentEClass = createEClass(PAYMENT);
-		createEAttribute(paymentEClass, PAYMENT__ID);
-		createEAttribute(paymentEClass, PAYMENT__METHOD);
-		createEAttribute(paymentEClass, PAYMENT__DATE);
-		createEAttribute(paymentEClass, PAYMENT__AMOUNT);
-
-		reviewEClass = createEClass(REVIEW);
-		createEAttribute(reviewEClass, REVIEW__MESSAGE);
-
-		notificationEClass = createEClass(NOTIFICATION);
-		createEAttribute(notificationEClass, NOTIFICATION__MESSAGE);
-		createEAttribute(notificationEClass, NOTIFICATION__NOTIFICATION_ID);
 
 		inventoryEClass = createEClass(INVENTORY);
 		createEReference(inventoryEClass, INVENTORY__CATEGORY);
@@ -1098,12 +1125,54 @@ public class RiseAndShopPackageImpl extends EPackageImpl implements RiseAndShopP
 		createEAttribute(eventEClass, EVENT__EVENT_NAME);
 		createEAttribute(eventEClass, EVENT__DATE);
 
+		notificationEClass = createEClass(NOTIFICATION);
+		createEAttribute(notificationEClass, NOTIFICATION__MESSAGE);
+		createEAttribute(notificationEClass, NOTIFICATION__NOTIFICATION_ID);
+
+		cartEClass = createEClass(CART);
+		createEAttribute(cartEClass, CART__CART_ID);
+		createEAttribute(cartEClass, CART__CUSTOMER_ID);
+		createEReference(cartEClass, CART__PRODUCTS);
+		createEReference(cartEClass, CART__PAYMENT_ISSUED);
+		createEReference(cartEClass, CART__REVIEW);
+
+		cartItemEClass = createEClass(CART_ITEM);
+		createEAttribute(cartItemEClass, CART_ITEM__NAME);
+		createEAttribute(cartItemEClass, CART_ITEM__QUANTITY);
+
+		paymentEClass = createEClass(PAYMENT);
+		createEAttribute(paymentEClass, PAYMENT__ID);
+		createEAttribute(paymentEClass, PAYMENT__METHOD);
+		createEAttribute(paymentEClass, PAYMENT__DATE);
+		createEAttribute(paymentEClass, PAYMENT__AMOUNT);
+
+		reviewEClass = createEClass(REVIEW);
+		createEAttribute(reviewEClass, REVIEW__MESSAGE);
+
 		salaryEClass = createEClass(SALARY);
 		createEAttribute(salaryEClass, SALARY__CHEQUE_ID);
 
 		utilsEClass = createEClass(UTILS);
 		createEOperation(utilsEClass, UTILS___CHECK_USERNAME);
 		createEOperation(utilsEClass, UTILS___IS_VALID_PASSWORD);
+
+		superviserEClass = createEClass(SUPERVISER);
+		createEOperation(superviserEClass, SUPERVISER___UPDATE_PRODUCT);
+		createEOperation(superviserEClass, SUPERVISER___ADD_NEW_PRODUCT);
+		createEOperation(superviserEClass, SUPERVISER___DELETE_PRODUCT);
+		createEOperation(superviserEClass, SUPERVISER___GET_STOCK_DETAILS);
+
+		teamLeaderEClass = createEClass(TEAM_LEADER);
+		createEReference(teamLeaderEClass, TEAM_LEADER__NOTIFICATIONS);
+
+		cashierEClass = createEClass(CASHIER);
+		createEReference(cashierEClass, CASHIER__CARTS);
+		createEOperation(cashierEClass, CASHIER___NOTIFY_LOW_STOCK);
+
+		managerEClass = createEClass(MANAGER);
+		createEOperation(managerEClass, MANAGER___GET_PRODUCT_LOCATION);
+		createEOperation(managerEClass, MANAGER___UPDATE_CATEGORY);
+		createEOperation(managerEClass, MANAGER___GET_SALES_DETAILS);
 	}
 
 	/**
@@ -1137,6 +1206,10 @@ public class RiseAndShopPackageImpl extends EPackageImpl implements RiseAndShopP
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		superviserEClass.getESuperTypes().add(this.getEmployee());
+		teamLeaderEClass.getESuperTypes().add(this.getEmployee());
+		cashierEClass.getESuperTypes().add(this.getEmployee());
+		managerEClass.getESuperTypes().add(this.getEmployee());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(mainEClass, Main.class, "Main", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1173,50 +1246,6 @@ public class RiseAndShopPackageImpl extends EPackageImpl implements RiseAndShopP
 		initEAttribute(getEmployee_Username(), theTypesPackage.getString(), "username", null, 1, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getEmployee_Password(), theTypesPackage.getString(), "password", null, 1, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getEmployee_Role(), theTypesPackage.getString(), "role", null, 1, 1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getEmployee_Carts(), this.getCart(), null, "carts", null, 0, -1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getEmployee_Notifications(), this.getNotification(), null, "notifications", null, 0, -1, Employee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEOperation(getEmployee__GetProductLocation(), null, "getProductLocation", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getEmployee__GetStockDetails(), null, "getStockDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getEmployee__UpdateProductQuantity(), null, "UpdateProductQuantity", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getEmployee__UpdateCategory(), null, "updateCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getEmployee__AddNewProduct(), null, "addNewProduct", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getEmployee__UpdateProduct(), null, "UpdateProduct", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getEmployee__DeleteProduct(), null, "DeleteProduct", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getEmployee__GetSalesDetails(), null, "getSalesDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEOperation(getEmployee__NotifyLowStock(), null, "notifyLowStock", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		initEClass(cartEClass, Cart.class, "Cart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCart_CartId(), theTypesPackage.getInteger(), "cartId", null, 1, 1, Cart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCart_CustomerId(), theTypesPackage.getInteger(), "customerId", null, 1, 1, Cart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getCart_Products(), this.getCartItem(), null, "products", null, 0, -1, Cart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getCart_PaymentIssued(), this.getPayment(), null, "paymentIssued", null, 1, 1, Cart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getCart_Review(), this.getReview(), null, "review", null, 1, 1, Cart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(cartItemEClass, CartItem.class, "CartItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCartItem_Name(), theTypesPackage.getString(), "name", null, 1, 1, CartItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCartItem_Quantity(), theTypesPackage.getInteger(), "quantity", null, 1, 1, CartItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(paymentEClass, Payment.class, "Payment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPayment_Id(), theTypesPackage.getInteger(), "id", null, 1, 1, Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPayment_Method(), theTypesPackage.getString(), "method", null, 1, 1, Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPayment_Date(), ecorePackage.getEDate(), "date", null, 1, 1, Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPayment_Amount(), theTypesPackage.getInteger(), "amount", null, 1, 1, Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(reviewEClass, Review.class, "Review", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getReview_Message(), theTypesPackage.getString(), "message", null, 1, 1, Review.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(notificationEClass, Notification.class, "Notification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNotification_Message(), theTypesPackage.getString(), "message", null, 1, 1, Notification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getNotification_NotificationId(), theTypesPackage.getInteger(), "notificationId", null, 1, 1, Notification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(inventoryEClass, Inventory.class, "Inventory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInventory_Category(), this.getCategories(), null, "category", null, 0, -1, Inventory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1242,6 +1271,30 @@ public class RiseAndShopPackageImpl extends EPackageImpl implements RiseAndShopP
 		initEAttribute(getEvent_EventName(), theTypesPackage.getString(), "eventName", null, 1, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getEvent_Date(), ecorePackage.getEDate(), "date", null, 1, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		initEClass(notificationEClass, Notification.class, "Notification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNotification_Message(), theTypesPackage.getString(), "message", null, 1, 1, Notification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getNotification_NotificationId(), theTypesPackage.getInteger(), "notificationId", null, 1, 1, Notification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(cartEClass, Cart.class, "Cart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCart_CartId(), theTypesPackage.getInteger(), "cartId", null, 1, 1, Cart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCart_CustomerId(), theTypesPackage.getInteger(), "customerId", null, 1, 1, Cart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCart_Products(), this.getCartItem(), null, "products", null, 0, -1, Cart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCart_PaymentIssued(), this.getPayment(), null, "paymentIssued", null, 1, 1, Cart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCart_Review(), this.getReview(), null, "review", null, 1, 1, Cart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(cartItemEClass, CartItem.class, "CartItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCartItem_Name(), theTypesPackage.getString(), "name", null, 1, 1, CartItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCartItem_Quantity(), theTypesPackage.getInteger(), "quantity", null, 1, 1, CartItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(paymentEClass, Payment.class, "Payment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPayment_Id(), theTypesPackage.getInteger(), "id", null, 1, 1, Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPayment_Method(), theTypesPackage.getString(), "method", null, 1, 1, Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPayment_Date(), ecorePackage.getEDate(), "date", null, 1, 1, Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPayment_Amount(), theTypesPackage.getInteger(), "amount", null, 1, 1, Payment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(reviewEClass, Review.class, "Review", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getReview_Message(), theTypesPackage.getString(), "message", null, 1, 1, Review.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
 		initEClass(salaryEClass, Salary.class, "Salary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSalary_ChequeId(), theTypesPackage.getReal(), "chequeId", null, 1, 1, Salary.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -1250,6 +1303,32 @@ public class RiseAndShopPackageImpl extends EPackageImpl implements RiseAndShopP
 		initEOperation(getUtils__CheckUsername(), null, "checkUsername", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getUtils__IsValidPassword(), null, "isValidPassword", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(superviserEClass, Superviser.class, "Superviser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getSuperviser__UpdateProduct(), null, "UpdateProduct", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getSuperviser__AddNewProduct(), null, "addNewProduct", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getSuperviser__DeleteProduct(), null, "DeleteProduct", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getSuperviser__GetStockDetails(), null, "getStockDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(teamLeaderEClass, TeamLeader.class, "TeamLeader", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTeamLeader_Notifications(), this.getNotification(), null, "notifications", null, 0, -1, TeamLeader.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(cashierEClass, Cashier.class, "Cashier", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCashier_Carts(), this.getCart(), null, "carts", null, 0, -1, Cashier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEOperation(getCashier__NotifyLowStock(), null, "notifyLowStock", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEClass(managerEClass, Manager.class, "Manager", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getManager__GetProductLocation(), null, "getProductLocation", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getManager__UpdateCategory(), null, "updateCategory", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		initEOperation(getManager__GetSalesDetails(), null, "getSalesDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

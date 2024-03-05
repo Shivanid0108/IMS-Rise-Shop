@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/RiseAndShop/src" modelPluginID="RiseAndShop" modelName="Test4"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.uml2.uml.ecore.importer"
+    complianceLevel="21.0" copyrightFields="false" usedGenPackages="../org.eclipse.uml2.types/model/Types.genmodel#//types"
+    operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="NON_API_INVARIANTS" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNTYPED_PROPERTIES" value="REPORT"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+  </genAnnotations>
+  <foreignModel>RiseAndShop.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="RiseAndShop" disposableProviderFactory="true"
+      ecorePackage="RiseAndShop.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Main">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Main/currEmployee"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//DatabaseUtils">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//DatabaseUtils/addEmployee"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//DatabaseUtils/UpdateEmployee"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//DatabaseUtils/deleteEmployee"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//DatabaseUtils/addProduct"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//DatabaseUtils/deleteProduct"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//DatabaseUtils/addStore"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//DatabaseUtils/updateStore"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//DatabaseUtils/deleteStore"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Store">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Store/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Store/address"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference RiseAndShop.ecore#//Store/employees"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference RiseAndShop.ecore#//Store/fullInventory"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference RiseAndShop.ecore#//Store/events"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Employee">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Employee/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Employee/id"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Employee/username"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Employee/password"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Employee/role"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Inventory">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference RiseAndShop.ecore#//Inventory/category"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Categories">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Categories/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference RiseAndShop.ecore#//Categories/products"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Product">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Product/id"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Product/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Product/location"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Product/quantity"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Product/price"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference RiseAndShop.ecore#//Product/supplierInfo"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Supplier">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Supplier/id"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Supplier/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Supplier/contactInfo"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Event">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Event/eventName"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Event/date"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Notification">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Notification/message"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Notification/notificationId"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Cart">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Cart/cartId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Cart/customerId"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference RiseAndShop.ecore#//Cart/products"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference RiseAndShop.ecore#//Cart/paymentIssued"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference RiseAndShop.ecore#//Cart/review"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//CartItem">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//CartItem/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//CartItem/quantity"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Payment">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Payment/id"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Payment/method"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Payment/date"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Payment/amount"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Review">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Review/message"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Salary">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute RiseAndShop.ecore#//Salary/chequeId"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Utils">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//Utils/checkUsername"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//Utils/isValidPassword"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Superviser">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//Superviser/UpdateProduct"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//Superviser/addNewProduct"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//Superviser/DeleteProduct"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//Superviser/getStockDetails"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//TeamLeader">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference RiseAndShop.ecore#//TeamLeader/notifications"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Cashier">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference RiseAndShop.ecore#//Cashier/carts"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//Cashier/notifyLowStock"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="RiseAndShop.ecore#//Manager">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//Manager/getProductLocation"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//Manager/updateCategory"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="RiseAndShop.ecore#//Manager/getSalesDetails"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

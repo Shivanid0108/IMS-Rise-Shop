@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Main extends EObject {
+	
 	/**
 	 * Returns the value of the '<em><b>Curr Employee</b></em>' attribute.
 	 * <!-- begin-user-doc -->

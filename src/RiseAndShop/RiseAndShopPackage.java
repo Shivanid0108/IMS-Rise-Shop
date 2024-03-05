@@ -122,7 +122,7 @@ public interface RiseAndShopPackage extends EPackage {
 	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getCart()
 	 * @generated
 	 */
-	int CART = 4;
+	int CART = 10;
 
 	/**
 	 * The meta object id for the '{@link RiseAndShop.impl.CartItemImpl <em>Cart Item</em>}' class.
@@ -132,7 +132,7 @@ public interface RiseAndShopPackage extends EPackage {
 	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getCartItem()
 	 * @generated
 	 */
-	int CART_ITEM = 5;
+	int CART_ITEM = 11;
 
 	/**
 	 * The meta object id for the '{@link RiseAndShop.impl.PaymentImpl <em>Payment</em>}' class.
@@ -142,7 +142,7 @@ public interface RiseAndShopPackage extends EPackage {
 	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getPayment()
 	 * @generated
 	 */
-	int PAYMENT = 6;
+	int PAYMENT = 12;
 
 	/**
 	 * The meta object id for the '{@link RiseAndShop.impl.ReviewImpl <em>Review</em>}' class.
@@ -152,7 +152,7 @@ public interface RiseAndShopPackage extends EPackage {
 	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getReview()
 	 * @generated
 	 */
-	int REVIEW = 7;
+	int REVIEW = 13;
 
 	/**
 	 * The meta object id for the '{@link RiseAndShop.impl.NotificationImpl <em>Notification</em>}' class.
@@ -162,7 +162,7 @@ public interface RiseAndShopPackage extends EPackage {
 	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getNotification()
 	 * @generated
 	 */
-	int NOTIFICATION = 8;
+	int NOTIFICATION = 9;
 
 	/**
 	 * The meta object id for the '{@link RiseAndShop.impl.InventoryImpl <em>Inventory</em>}' class.
@@ -172,7 +172,7 @@ public interface RiseAndShopPackage extends EPackage {
 	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getInventory()
 	 * @generated
 	 */
-	int INVENTORY = 9;
+	int INVENTORY = 4;
 
 	/**
 	 * The meta object id for the '{@link RiseAndShop.impl.CategoriesImpl <em>Categories</em>}' class.
@@ -182,7 +182,7 @@ public interface RiseAndShopPackage extends EPackage {
 	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getCategories()
 	 * @generated
 	 */
-	int CATEGORIES = 10;
+	int CATEGORIES = 5;
 
 	/**
 	 * The meta object id for the '{@link RiseAndShop.impl.ProductImpl <em>Product</em>}' class.
@@ -192,7 +192,7 @@ public interface RiseAndShopPackage extends EPackage {
 	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getProduct()
 	 * @generated
 	 */
-	int PRODUCT = 11;
+	int PRODUCT = 6;
 
 	/**
 	 * The meta object id for the '{@link RiseAndShop.impl.SupplierImpl <em>Supplier</em>}' class.
@@ -202,7 +202,7 @@ public interface RiseAndShopPackage extends EPackage {
 	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getSupplier()
 	 * @generated
 	 */
-	int SUPPLIER = 12;
+	int SUPPLIER = 7;
 
 	/**
 	 * The meta object id for the '{@link RiseAndShop.impl.EventImpl <em>Event</em>}' class.
@@ -212,7 +212,7 @@ public interface RiseAndShopPackage extends EPackage {
 	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getEvent()
 	 * @generated
 	 */
-	int EVENT = 13;
+	int EVENT = 8;
 
 	/**
 	 * The meta object id for the '{@link RiseAndShop.impl.SalaryImpl <em>Salary</em>}' class.
@@ -443,112 +443,13 @@ public interface RiseAndShopPackage extends EPackage {
 	int EMPLOYEE__ROLE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Carts</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMPLOYEE__CARTS = 5;
-
-	/**
-	 * The feature id for the '<em><b>Notifications</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMPLOYEE__NOTIFICATIONS = 6;
-
-	/**
 	 * The number of structural features of the '<em>Employee</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE_FEATURE_COUNT = 7;
-
-	/**
-	 * The operation id for the '<em>Get Product Location</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMPLOYEE___GET_PRODUCT_LOCATION = 0;
-
-	/**
-	 * The operation id for the '<em>Get Stock Details</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMPLOYEE___GET_STOCK_DETAILS = 1;
-
-	/**
-	 * The operation id for the '<em>Update Product Quantity</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMPLOYEE___UPDATE_PRODUCT_QUANTITY = 2;
-
-	/**
-	 * The operation id for the '<em>Update Category</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMPLOYEE___UPDATE_CATEGORY = 3;
-
-	/**
-	 * The operation id for the '<em>Add New Product</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMPLOYEE___ADD_NEW_PRODUCT = 4;
-
-	/**
-	 * The operation id for the '<em>Update Product</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMPLOYEE___UPDATE_PRODUCT = 5;
-
-	/**
-	 * The operation id for the '<em>Delete Product</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMPLOYEE___DELETE_PRODUCT = 6;
-
-	/**
-	 * The operation id for the '<em>Get Sales Details</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMPLOYEE___GET_SALES_DETAILS = 7;
-
-	/**
-	 * The operation id for the '<em>Notify Low Stock</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMPLOYEE___NOTIFY_LOW_STOCK = 8;
+	int EMPLOYEE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Employee</em>' class.
@@ -557,223 +458,7 @@ public interface RiseAndShopPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMPLOYEE_OPERATION_COUNT = 9;
-
-	/**
-	 * The feature id for the '<em><b>Cart Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CART__CART_ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Customer Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CART__CUSTOMER_ID = 1;
-
-	/**
-	 * The feature id for the '<em><b>Products</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CART__PRODUCTS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Payment Issued</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CART__PAYMENT_ISSUED = 3;
-
-	/**
-	 * The feature id for the '<em><b>Review</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CART__REVIEW = 4;
-
-	/**
-	 * The number of structural features of the '<em>Cart</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CART_FEATURE_COUNT = 5;
-
-	/**
-	 * The number of operations of the '<em>Cart</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CART_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CART_ITEM__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CART_ITEM__QUANTITY = 1;
-
-	/**
-	 * The number of structural features of the '<em>Cart Item</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CART_ITEM_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Cart Item</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CART_ITEM_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Method</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT__METHOD = 1;
-
-	/**
-	 * The feature id for the '<em><b>Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT__DATE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Amount</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT__AMOUNT = 3;
-
-	/**
-	 * The number of structural features of the '<em>Payment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Payment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAYMENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REVIEW__MESSAGE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Review</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REVIEW_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Review</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REVIEW_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Message</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NOTIFICATION__MESSAGE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Notification Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NOTIFICATION__NOTIFICATION_ID = 1;
-
-	/**
-	 * The number of structural features of the '<em>Notification</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NOTIFICATION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Notification</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NOTIFICATION_OPERATION_COUNT = 0;
+	int EMPLOYEE_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' reference list.
@@ -992,6 +677,222 @@ public interface RiseAndShopPackage extends EPackage {
 	int EVENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOTIFICATION__MESSAGE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Notification Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOTIFICATION__NOTIFICATION_ID = 1;
+
+	/**
+	 * The number of structural features of the '<em>Notification</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOTIFICATION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Notification</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOTIFICATION_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Cart Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART__CART_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Customer Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART__CUSTOMER_ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Products</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART__PRODUCTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Payment Issued</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART__PAYMENT_ISSUED = 3;
+
+	/**
+	 * The feature id for the '<em><b>Review</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART__REVIEW = 4;
+
+	/**
+	 * The number of structural features of the '<em>Cart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Cart</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_ITEM__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_ITEM__QUANTITY = 1;
+
+	/**
+	 * The number of structural features of the '<em>Cart Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_ITEM_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Cart Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CART_ITEM_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT__METHOD = 1;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT__DATE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Amount</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT__AMOUNT = 3;
+
+	/**
+	 * The number of structural features of the '<em>Payment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Payment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REVIEW__MESSAGE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Review</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REVIEW_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Review</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REVIEW_OPERATION_COUNT = 0;
+
+	/**
 	 * The feature id for the '<em><b>Cheque Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1053,6 +954,389 @@ public interface RiseAndShopPackage extends EPackage {
 	 * @ordered
 	 */
 	int UTILS_OPERATION_COUNT = 2;
+
+
+	/**
+	 * The meta object id for the '{@link RiseAndShop.impl.SuperviserImpl <em>Superviser</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see RiseAndShop.impl.SuperviserImpl
+	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getSuperviser()
+	 * @generated
+	 */
+	int SUPERVISER = 16;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPERVISER__NAME = EMPLOYEE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPERVISER__ID = EMPLOYEE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Username</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPERVISER__USERNAME = EMPLOYEE__USERNAME;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPERVISER__PASSWORD = EMPLOYEE__PASSWORD;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPERVISER__ROLE = EMPLOYEE__ROLE;
+
+	/**
+	 * The number of structural features of the '<em>Superviser</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPERVISER_FEATURE_COUNT = EMPLOYEE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Update Product</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPERVISER___UPDATE_PRODUCT = EMPLOYEE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Add New Product</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPERVISER___ADD_NEW_PRODUCT = EMPLOYEE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Delete Product</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPERVISER___DELETE_PRODUCT = EMPLOYEE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Stock Details</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPERVISER___GET_STOCK_DETAILS = EMPLOYEE_OPERATION_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Superviser</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPERVISER_OPERATION_COUNT = EMPLOYEE_OPERATION_COUNT + 4;
+
+	/**
+	 * The meta object id for the '{@link RiseAndShop.impl.TeamLeaderImpl <em>Team Leader</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see RiseAndShop.impl.TeamLeaderImpl
+	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getTeamLeader()
+	 * @generated
+	 */
+	int TEAM_LEADER = 17;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM_LEADER__NAME = EMPLOYEE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM_LEADER__ID = EMPLOYEE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Username</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM_LEADER__USERNAME = EMPLOYEE__USERNAME;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM_LEADER__PASSWORD = EMPLOYEE__PASSWORD;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM_LEADER__ROLE = EMPLOYEE__ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Notifications</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM_LEADER__NOTIFICATIONS = EMPLOYEE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Team Leader</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM_LEADER_FEATURE_COUNT = EMPLOYEE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Team Leader</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM_LEADER_OPERATION_COUNT = EMPLOYEE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link RiseAndShop.impl.CashierImpl <em>Cashier</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see RiseAndShop.impl.CashierImpl
+	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getCashier()
+	 * @generated
+	 */
+	int CASHIER = 18;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASHIER__NAME = EMPLOYEE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASHIER__ID = EMPLOYEE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Username</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASHIER__USERNAME = EMPLOYEE__USERNAME;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASHIER__PASSWORD = EMPLOYEE__PASSWORD;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASHIER__ROLE = EMPLOYEE__ROLE;
+
+	/**
+	 * The feature id for the '<em><b>Carts</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASHIER__CARTS = EMPLOYEE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Cashier</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASHIER_FEATURE_COUNT = EMPLOYEE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Notify Low Stock</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASHIER___NOTIFY_LOW_STOCK = EMPLOYEE_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Cashier</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASHIER_OPERATION_COUNT = EMPLOYEE_OPERATION_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link RiseAndShop.impl.ManagerImpl <em>Manager</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see RiseAndShop.impl.ManagerImpl
+	 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getManager()
+	 * @generated
+	 */
+	int MANAGER = 19;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER__NAME = EMPLOYEE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER__ID = EMPLOYEE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Username</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER__USERNAME = EMPLOYEE__USERNAME;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER__PASSWORD = EMPLOYEE__PASSWORD;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER__ROLE = EMPLOYEE__ROLE;
+
+	/**
+	 * The number of structural features of the '<em>Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER_FEATURE_COUNT = EMPLOYEE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Product Location</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER___GET_PRODUCT_LOCATION = EMPLOYEE_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Update Category</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER___UPDATE_CATEGORY = EMPLOYEE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Sales Details</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER___GET_SALES_DETAILS = EMPLOYEE_OPERATION_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Manager</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MANAGER_OPERATION_COUNT = EMPLOYEE_OPERATION_COUNT + 3;
 
 
 	/**
@@ -1205,118 +1489,6 @@ public interface RiseAndShopPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEmployee_Role();
-
-	/**
-	 * Returns the meta object for the reference list '{@link RiseAndShop.Employee#getCarts <em>Carts</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Carts</em>'.
-	 * @see RiseAndShop.Employee#getCarts()
-	 * @see #getEmployee()
-	 * @generated
-	 */
-	EReference getEmployee_Carts();
-
-	/**
-	 * Returns the meta object for the reference list '{@link RiseAndShop.Employee#getNotifications <em>Notifications</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Notifications</em>'.
-	 * @see RiseAndShop.Employee#getNotifications()
-	 * @see #getEmployee()
-	 * @generated
-	 */
-	EReference getEmployee_Notifications();
-
-	/**
-	 * Returns the meta object for the '{@link RiseAndShop.Employee#getProductLocation() <em>Get Product Location</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Product Location</em>' operation.
-	 * @see RiseAndShop.Employee#getProductLocation()
-	 * @generated
-	 */
-	EOperation getEmployee__GetProductLocation();
-
-	/**
-	 * Returns the meta object for the '{@link RiseAndShop.Employee#getStockDetails() <em>Get Stock Details</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Stock Details</em>' operation.
-	 * @see RiseAndShop.Employee#getStockDetails()
-	 * @generated
-	 */
-	EOperation getEmployee__GetStockDetails();
-
-	/**
-	 * Returns the meta object for the '{@link RiseAndShop.Employee#UpdateProductQuantity() <em>Update Product Quantity</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Update Product Quantity</em>' operation.
-	 * @see RiseAndShop.Employee#UpdateProductQuantity()
-	 * @generated
-	 */
-	EOperation getEmployee__UpdateProductQuantity();
-
-	/**
-	 * Returns the meta object for the '{@link RiseAndShop.Employee#updateCategory() <em>Update Category</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Update Category</em>' operation.
-	 * @see RiseAndShop.Employee#updateCategory()
-	 * @generated
-	 */
-	EOperation getEmployee__UpdateCategory();
-
-	/**
-	 * Returns the meta object for the '{@link RiseAndShop.Employee#addNewProduct() <em>Add New Product</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add New Product</em>' operation.
-	 * @see RiseAndShop.Employee#addNewProduct()
-	 * @generated
-	 */
-	EOperation getEmployee__AddNewProduct();
-
-	/**
-	 * Returns the meta object for the '{@link RiseAndShop.Employee#UpdateProduct() <em>Update Product</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Update Product</em>' operation.
-	 * @see RiseAndShop.Employee#UpdateProduct()
-	 * @generated
-	 */
-	EOperation getEmployee__UpdateProduct();
-
-	/**
-	 * Returns the meta object for the '{@link RiseAndShop.Employee#DeleteProduct() <em>Delete Product</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Delete Product</em>' operation.
-	 * @see RiseAndShop.Employee#DeleteProduct()
-	 * @generated
-	 */
-	EOperation getEmployee__DeleteProduct();
-
-	/**
-	 * Returns the meta object for the '{@link RiseAndShop.Employee#getSalesDetails() <em>Get Sales Details</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Sales Details</em>' operation.
-	 * @see RiseAndShop.Employee#getSalesDetails()
-	 * @generated
-	 */
-	EOperation getEmployee__GetSalesDetails();
-
-	/**
-	 * Returns the meta object for the '{@link RiseAndShop.Employee#notifyLowStock() <em>Notify Low Stock</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Notify Low Stock</em>' operation.
-	 * @see RiseAndShop.Employee#notifyLowStock()
-	 * @generated
-	 */
-	EOperation getEmployee__NotifyLowStock();
 
 	/**
 	 * Returns the meta object for class '{@link RiseAndShop.Cart <em>Cart</em>}'.
@@ -1778,6 +1950,148 @@ public interface RiseAndShopPackage extends EPackage {
 	EOperation getUtils__IsValidPassword();
 
 	/**
+	 * Returns the meta object for class '{@link RiseAndShop.Superviser <em>Superviser</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Superviser</em>'.
+	 * @see RiseAndShop.Superviser
+	 * @generated
+	 */
+	EClass getSuperviser();
+
+	/**
+	 * Returns the meta object for the '{@link RiseAndShop.Superviser#UpdateProduct() <em>Update Product</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Update Product</em>' operation.
+	 * @see RiseAndShop.Superviser#UpdateProduct()
+	 * @generated
+	 */
+	EOperation getSuperviser__UpdateProduct();
+
+	/**
+	 * Returns the meta object for the '{@link RiseAndShop.Superviser#addNewProduct() <em>Add New Product</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add New Product</em>' operation.
+	 * @see RiseAndShop.Superviser#addNewProduct()
+	 * @generated
+	 */
+	EOperation getSuperviser__AddNewProduct();
+
+	/**
+	 * Returns the meta object for the '{@link RiseAndShop.Superviser#DeleteProduct() <em>Delete Product</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Delete Product</em>' operation.
+	 * @see RiseAndShop.Superviser#DeleteProduct()
+	 * @generated
+	 */
+	EOperation getSuperviser__DeleteProduct();
+
+	/**
+	 * Returns the meta object for the '{@link RiseAndShop.Superviser#getStockDetails() <em>Get Stock Details</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Stock Details</em>' operation.
+	 * @see RiseAndShop.Superviser#getStockDetails()
+	 * @generated
+	 */
+	EOperation getSuperviser__GetStockDetails();
+
+	/**
+	 * Returns the meta object for class '{@link RiseAndShop.TeamLeader <em>Team Leader</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Team Leader</em>'.
+	 * @see RiseAndShop.TeamLeader
+	 * @generated
+	 */
+	EClass getTeamLeader();
+
+	/**
+	 * Returns the meta object for the reference list '{@link RiseAndShop.TeamLeader#getNotifications <em>Notifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Notifications</em>'.
+	 * @see RiseAndShop.TeamLeader#getNotifications()
+	 * @see #getTeamLeader()
+	 * @generated
+	 */
+	EReference getTeamLeader_Notifications();
+
+	/**
+	 * Returns the meta object for class '{@link RiseAndShop.Cashier <em>Cashier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cashier</em>'.
+	 * @see RiseAndShop.Cashier
+	 * @generated
+	 */
+	EClass getCashier();
+
+	/**
+	 * Returns the meta object for the reference list '{@link RiseAndShop.Cashier#getCarts <em>Carts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Carts</em>'.
+	 * @see RiseAndShop.Cashier#getCarts()
+	 * @see #getCashier()
+	 * @generated
+	 */
+	EReference getCashier_Carts();
+
+	/**
+	 * Returns the meta object for the '{@link RiseAndShop.Cashier#notifyLowStock() <em>Notify Low Stock</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Notify Low Stock</em>' operation.
+	 * @see RiseAndShop.Cashier#notifyLowStock()
+	 * @generated
+	 */
+	EOperation getCashier__NotifyLowStock();
+
+	/**
+	 * Returns the meta object for class '{@link RiseAndShop.Manager <em>Manager</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Manager</em>'.
+	 * @see RiseAndShop.Manager
+	 * @generated
+	 */
+	EClass getManager();
+
+	/**
+	 * Returns the meta object for the '{@link RiseAndShop.Manager#getProductLocation() <em>Get Product Location</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Product Location</em>' operation.
+	 * @see RiseAndShop.Manager#getProductLocation()
+	 * @generated
+	 */
+	EOperation getManager__GetProductLocation();
+
+	/**
+	 * Returns the meta object for the '{@link RiseAndShop.Manager#updateCategory() <em>Update Category</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Update Category</em>' operation.
+	 * @see RiseAndShop.Manager#updateCategory()
+	 * @generated
+	 */
+	EOperation getManager__UpdateCategory();
+
+	/**
+	 * Returns the meta object for the '{@link RiseAndShop.Manager#getSalesDetails() <em>Get Sales Details</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Sales Details</em>' operation.
+	 * @see RiseAndShop.Manager#getSalesDetails()
+	 * @generated
+	 */
+	EOperation getManager__GetSalesDetails();
+
+	/**
 	 * Returns the meta object for class '{@link RiseAndShop.DatabaseUtils <em>Database Utils</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2007,94 +2321,6 @@ public interface RiseAndShopPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EMPLOYEE__ROLE = eINSTANCE.getEmployee_Role();
-
-		/**
-		 * The meta object literal for the '<em><b>Carts</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EMPLOYEE__CARTS = eINSTANCE.getEmployee_Carts();
-
-		/**
-		 * The meta object literal for the '<em><b>Notifications</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EMPLOYEE__NOTIFICATIONS = eINSTANCE.getEmployee_Notifications();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Product Location</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMPLOYEE___GET_PRODUCT_LOCATION = eINSTANCE.getEmployee__GetProductLocation();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Stock Details</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMPLOYEE___GET_STOCK_DETAILS = eINSTANCE.getEmployee__GetStockDetails();
-
-		/**
-		 * The meta object literal for the '<em><b>Update Product Quantity</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMPLOYEE___UPDATE_PRODUCT_QUANTITY = eINSTANCE.getEmployee__UpdateProductQuantity();
-
-		/**
-		 * The meta object literal for the '<em><b>Update Category</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMPLOYEE___UPDATE_CATEGORY = eINSTANCE.getEmployee__UpdateCategory();
-
-		/**
-		 * The meta object literal for the '<em><b>Add New Product</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMPLOYEE___ADD_NEW_PRODUCT = eINSTANCE.getEmployee__AddNewProduct();
-
-		/**
-		 * The meta object literal for the '<em><b>Update Product</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMPLOYEE___UPDATE_PRODUCT = eINSTANCE.getEmployee__UpdateProduct();
-
-		/**
-		 * The meta object literal for the '<em><b>Delete Product</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMPLOYEE___DELETE_PRODUCT = eINSTANCE.getEmployee__DeleteProduct();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Sales Details</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMPLOYEE___GET_SALES_DETAILS = eINSTANCE.getEmployee__GetSalesDetails();
-
-		/**
-		 * The meta object literal for the '<em><b>Notify Low Stock</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation EMPLOYEE___NOTIFY_LOW_STOCK = eINSTANCE.getEmployee__NotifyLowStock();
 
 		/**
 		 * The meta object literal for the '{@link RiseAndShop.impl.CartImpl <em>Cart</em>}' class.
@@ -2463,6 +2689,126 @@ public interface RiseAndShopPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation UTILS___IS_VALID_PASSWORD = eINSTANCE.getUtils__IsValidPassword();
+
+		/**
+		 * The meta object literal for the '{@link RiseAndShop.impl.SuperviserImpl <em>Superviser</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see RiseAndShop.impl.SuperviserImpl
+		 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getSuperviser()
+		 * @generated
+		 */
+		EClass SUPERVISER = eINSTANCE.getSuperviser();
+
+		/**
+		 * The meta object literal for the '<em><b>Update Product</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SUPERVISER___UPDATE_PRODUCT = eINSTANCE.getSuperviser__UpdateProduct();
+
+		/**
+		 * The meta object literal for the '<em><b>Add New Product</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SUPERVISER___ADD_NEW_PRODUCT = eINSTANCE.getSuperviser__AddNewProduct();
+
+		/**
+		 * The meta object literal for the '<em><b>Delete Product</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SUPERVISER___DELETE_PRODUCT = eINSTANCE.getSuperviser__DeleteProduct();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Stock Details</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation SUPERVISER___GET_STOCK_DETAILS = eINSTANCE.getSuperviser__GetStockDetails();
+
+		/**
+		 * The meta object literal for the '{@link RiseAndShop.impl.TeamLeaderImpl <em>Team Leader</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see RiseAndShop.impl.TeamLeaderImpl
+		 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getTeamLeader()
+		 * @generated
+		 */
+		EClass TEAM_LEADER = eINSTANCE.getTeamLeader();
+
+		/**
+		 * The meta object literal for the '<em><b>Notifications</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEAM_LEADER__NOTIFICATIONS = eINSTANCE.getTeamLeader_Notifications();
+
+		/**
+		 * The meta object literal for the '{@link RiseAndShop.impl.CashierImpl <em>Cashier</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see RiseAndShop.impl.CashierImpl
+		 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getCashier()
+		 * @generated
+		 */
+		EClass CASHIER = eINSTANCE.getCashier();
+
+		/**
+		 * The meta object literal for the '<em><b>Carts</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CASHIER__CARTS = eINSTANCE.getCashier_Carts();
+
+		/**
+		 * The meta object literal for the '<em><b>Notify Low Stock</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CASHIER___NOTIFY_LOW_STOCK = eINSTANCE.getCashier__NotifyLowStock();
+
+		/**
+		 * The meta object literal for the '{@link RiseAndShop.impl.ManagerImpl <em>Manager</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see RiseAndShop.impl.ManagerImpl
+		 * @see RiseAndShop.impl.RiseAndShopPackageImpl#getManager()
+		 * @generated
+		 */
+		EClass MANAGER = eINSTANCE.getManager();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Product Location</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MANAGER___GET_PRODUCT_LOCATION = eINSTANCE.getManager__GetProductLocation();
+
+		/**
+		 * The meta object literal for the '<em><b>Update Category</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MANAGER___UPDATE_CATEGORY = eINSTANCE.getManager__UpdateCategory();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Sales Details</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation MANAGER___GET_SALES_DETAILS = eINSTANCE.getManager__GetSalesDetails();
 
 		/**
 		 * The meta object literal for the '{@link RiseAndShop.impl.DatabaseUtilsImpl <em>Database Utils</em>}' class.

@@ -28,15 +28,6 @@
         upperBound="-1" eType="#//Event"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Employee">
-    <eOperations name="getProductLocation" ordered="false" lowerBound="1"/>
-    <eOperations name="getStockDetails" ordered="false" lowerBound="1"/>
-    <eOperations name="UpdateProductQuantity" ordered="false" lowerBound="1"/>
-    <eOperations name="updateCategory" ordered="false" lowerBound="1"/>
-    <eOperations name="addNewProduct" ordered="false" lowerBound="1"/>
-    <eOperations name="UpdateProduct" ordered="false" lowerBound="1"/>
-    <eOperations name="DeleteProduct" ordered="false" lowerBound="1"/>
-    <eOperations name="getSalesDetails" ordered="false" lowerBound="1"/>
-    <eOperations name="notifyLowStock" ordered="false" lowerBound="1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
@@ -47,48 +38,6 @@
         lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" ordered="false" lowerBound="1"
         eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="carts" ordered="false"
-        upperBound="-1" eType="#//Cart"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="notifications" ordered="false"
-        upperBound="-1" eType="#//Notification"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Cart">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cartId" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="customerId" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="products" ordered="false"
-        upperBound="-1" eType="#//CartItem"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="paymentIssued" ordered="false"
-        lowerBound="1" eType="#//Payment"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="review" ordered="false"
-        lowerBound="1" eType="#//Review"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CartItem">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
-        eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Payment">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
-        eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" ordered="false" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="amount" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Review">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Notification">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="notificationId" ordered="false"
-        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Inventory">
     <eStructuralFeatures xsi:type="ecore:EReference" name="category" ordered="false"
@@ -128,6 +77,44 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Notification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="notificationId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cart">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cartId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="customerId" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="products" ordered="false"
+        upperBound="-1" eType="#//CartItem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paymentIssued" ordered="false"
+        lowerBound="1" eType="#//Payment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="review" ordered="false"
+        lowerBound="1" eType="#//Review"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CartItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Payment">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="amount" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Review">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Salary">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="chequeId" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
@@ -135,5 +122,25 @@
   <eClassifiers xsi:type="ecore:EClass" name="Utils">
     <eOperations name="checkUsername" ordered="false" lowerBound="1"/>
     <eOperations name="isValidPassword" ordered="false" lowerBound="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Superviser" eSuperTypes="#//Employee">
+    <eOperations name="UpdateProduct" ordered="false" lowerBound="1"/>
+    <eOperations name="addNewProduct" ordered="false" lowerBound="1"/>
+    <eOperations name="DeleteProduct" ordered="false" lowerBound="1"/>
+    <eOperations name="getStockDetails" ordered="false" lowerBound="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TeamLeader" eSuperTypes="#//Employee">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="notifications" ordered="false"
+        upperBound="-1" eType="#//Notification"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cashier" eSuperTypes="#//Employee">
+    <eOperations name="notifyLowStock" ordered="false" lowerBound="1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="carts" ordered="false"
+        upperBound="-1" eType="#//Cart"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Manager" eSuperTypes="#//Employee">
+    <eOperations name="getProductLocation" ordered="false" lowerBound="1"/>
+    <eOperations name="updateCategory" ordered="false" lowerBound="1"/>
+    <eOperations name="getSalesDetails" ordered="false" lowerBound="1"/>
   </eClassifiers>
 </ecore:EPackage>

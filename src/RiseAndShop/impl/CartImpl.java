@@ -116,6 +116,7 @@ public class CartImpl extends MinimalEObjectImpl.Container implements Cart {
 	 * @generated
 	 */
 	protected CartImpl() {
+		
 		super();
 	}
 

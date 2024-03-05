@@ -2,8 +2,6 @@
  */
 package RiseAndShop;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -20,8 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link RiseAndShop.Employee#getUsername <em>Username</em>}</li>
  *   <li>{@link RiseAndShop.Employee#getPassword <em>Password</em>}</li>
  *   <li>{@link RiseAndShop.Employee#getRole <em>Role</em>}</li>
- *   <li>{@link RiseAndShop.Employee#getCarts <em>Carts</em>}</li>
- *   <li>{@link RiseAndShop.Employee#getNotifications <em>Notifications</em>}</li>
  * </ul>
  *
  * @see RiseAndShop.RiseAndShopPackage#getEmployee()
@@ -158,109 +154,5 @@ public interface Employee extends EObject {
 	 * @generated
 	 */
 	void setRole(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Carts</b></em>' reference list.
-	 * The list contents are of type {@link RiseAndShop.Cart}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Carts</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Carts</em>' reference list.
-	 * @see RiseAndShop.RiseAndShopPackage#getEmployee_Carts()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<Cart> getCarts();
-
-	/**
-	 * Returns the value of the '<em><b>Notifications</b></em>' reference list.
-	 * The list contents are of type {@link RiseAndShop.Notification}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Notifications</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Notifications</em>' reference list.
-	 * @see RiseAndShop.RiseAndShopPackage#getEmployee_Notifications()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<Notification> getNotifications();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	void getProductLocation();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	void getStockDetails();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void UpdateProductQuantity();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void updateCategory();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void addNewProduct();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void UpdateProduct();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void DeleteProduct();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation"
-	 * @generated
-	 */
-	void getSalesDetails();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void notifyLowStock();
 
 } // Employee

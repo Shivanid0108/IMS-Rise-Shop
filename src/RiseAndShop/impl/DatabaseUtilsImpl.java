@@ -48,7 +48,8 @@ public class DatabaseUtilsImpl extends MinimalEObjectImpl.Container implements D
 	public void addEmployee() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		System.out.println("Employee is created"); 
+		//throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -59,7 +60,8 @@ public class DatabaseUtilsImpl extends MinimalEObjectImpl.Container implements D
 	public void UpdateEmployee() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		System.out.println("Update employee with new details");
 	}
 
 	/**
@@ -70,7 +72,8 @@ public class DatabaseUtilsImpl extends MinimalEObjectImpl.Container implements D
 	public void deleteEmployee() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+//		throw new UnsupportedOperationException();
+		System.out.println("Deleted employee");
 	}
 
 	/**
@@ -81,7 +84,8 @@ public class DatabaseUtilsImpl extends MinimalEObjectImpl.Container implements D
 	public void addProduct() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+//		throw new UnsupportedOperationException();
+		System.out.println("Product added");
 	}
 
 	/**
@@ -92,7 +96,8 @@ public class DatabaseUtilsImpl extends MinimalEObjectImpl.Container implements D
 	public void deleteProduct() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+//		throw new UnsupportedOperationException();
+		System.out.println("Deleted product");
 	}
 
 	/**
@@ -103,7 +108,8 @@ public class DatabaseUtilsImpl extends MinimalEObjectImpl.Container implements D
 	public void addStore() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+//		throw new UnsupportedOperationException();
+		System.out.println("Store added");
 	}
 
 	/**
@@ -114,7 +120,8 @@ public class DatabaseUtilsImpl extends MinimalEObjectImpl.Container implements D
 	public void updateStore() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+//		throw new UnsupportedOperationException();
+		System.out.println("Store details updated");
 	}
 
 	/**
@@ -125,7 +132,8 @@ public class DatabaseUtilsImpl extends MinimalEObjectImpl.Container implements D
 	public void deleteStore() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+//		throw new UnsupportedOperationException();
+		System.out.println("Store deleted");
 	}
 
 	/**

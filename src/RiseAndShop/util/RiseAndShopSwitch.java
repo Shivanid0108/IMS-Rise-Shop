@@ -90,36 +90,6 @@ public class RiseAndShopSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RiseAndShopPackage.CART: {
-				Cart cart = (Cart)theEObject;
-				T result = caseCart(cart);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RiseAndShopPackage.CART_ITEM: {
-				CartItem cartItem = (CartItem)theEObject;
-				T result = caseCartItem(cartItem);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RiseAndShopPackage.PAYMENT: {
-				Payment payment = (Payment)theEObject;
-				T result = casePayment(payment);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RiseAndShopPackage.REVIEW: {
-				Review review = (Review)theEObject;
-				T result = caseReview(review);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case RiseAndShopPackage.NOTIFICATION: {
-				Notification notification = (Notification)theEObject;
-				T result = caseNotification(notification);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case RiseAndShopPackage.INVENTORY: {
 				Inventory inventory = (Inventory)theEObject;
 				T result = caseInventory(inventory);
@@ -150,6 +120,36 @@ public class RiseAndShopSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case RiseAndShopPackage.NOTIFICATION: {
+				Notification notification = (Notification)theEObject;
+				T result = caseNotification(notification);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RiseAndShopPackage.CART: {
+				Cart cart = (Cart)theEObject;
+				T result = caseCart(cart);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RiseAndShopPackage.CART_ITEM: {
+				CartItem cartItem = (CartItem)theEObject;
+				T result = caseCartItem(cartItem);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RiseAndShopPackage.PAYMENT: {
+				Payment payment = (Payment)theEObject;
+				T result = casePayment(payment);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RiseAndShopPackage.REVIEW: {
+				Review review = (Review)theEObject;
+				T result = caseReview(review);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case RiseAndShopPackage.SALARY: {
 				Salary salary = (Salary)theEObject;
 				T result = caseSalary(salary);
@@ -159,6 +159,34 @@ public class RiseAndShopSwitch<T> extends Switch<T> {
 			case RiseAndShopPackage.UTILS: {
 				Utils utils = (Utils)theEObject;
 				T result = caseUtils(utils);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RiseAndShopPackage.SUPERVISER: {
+				Superviser superviser = (Superviser)theEObject;
+				T result = caseSuperviser(superviser);
+				if (result == null) result = caseEmployee(superviser);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RiseAndShopPackage.TEAM_LEADER: {
+				TeamLeader teamLeader = (TeamLeader)theEObject;
+				T result = caseTeamLeader(teamLeader);
+				if (result == null) result = caseEmployee(teamLeader);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RiseAndShopPackage.CASHIER: {
+				Cashier cashier = (Cashier)theEObject;
+				T result = caseCashier(cashier);
+				if (result == null) result = caseEmployee(cashier);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case RiseAndShopPackage.MANAGER: {
+				Manager manager = (Manager)theEObject;
+				T result = caseManager(manager);
+				if (result == null) result = caseEmployee(manager);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -388,6 +416,66 @@ public class RiseAndShopSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseUtils(Utils object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Superviser</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Superviser</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSuperviser(Superviser object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Team Leader</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Team Leader</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTeamLeader(TeamLeader object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Cashier</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Cashier</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCashier(Cashier object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Manager</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseManager(Manager object) {
 		return null;
 	}
 

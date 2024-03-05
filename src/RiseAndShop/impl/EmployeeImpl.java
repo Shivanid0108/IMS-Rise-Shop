@@ -2,23 +2,12 @@
  */
 package RiseAndShop.impl;
 
-import RiseAndShop.Cart;
 import RiseAndShop.Employee;
-import RiseAndShop.Notification;
 import RiseAndShop.RiseAndShopPackage;
-
-import java.lang.reflect.InvocationTargetException;
-
-import java.util.Collection;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,8 +22,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link RiseAndShop.impl.EmployeeImpl#getUsername <em>Username</em>}</li>
  *   <li>{@link RiseAndShop.impl.EmployeeImpl#getPassword <em>Password</em>}</li>
  *   <li>{@link RiseAndShop.impl.EmployeeImpl#getRole <em>Role</em>}</li>
- *   <li>{@link RiseAndShop.impl.EmployeeImpl#getCarts <em>Carts</em>}</li>
- *   <li>{@link RiseAndShop.impl.EmployeeImpl#getNotifications <em>Notifications</em>}</li>
  * </ul>
  *
  * @generated
@@ -139,26 +126,6 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 	 * @ordered
 	 */
 	protected String role = ROLE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getCarts() <em>Carts</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCarts()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Cart> carts;
-
-	/**
-	 * The cached value of the '{@link #getNotifications() <em>Notifications</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNotifications()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Notification> notifications;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -300,131 +267,6 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 	 * @generated
 	 */
 	@Override
-	public EList<Cart> getCarts() {
-		if (carts == null) {
-			carts = new EObjectResolvingEList<Cart>(Cart.class, this, RiseAndShopPackage.EMPLOYEE__CARTS);
-		}
-		return carts;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Notification> getNotifications() {
-		if (notifications == null) {
-			notifications = new EObjectResolvingEList<Notification>(Notification.class, this, RiseAndShopPackage.EMPLOYEE__NOTIFICATIONS);
-		}
-		return notifications;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getProductLocation() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getStockDetails() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void UpdateProductQuantity() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void updateCategory() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void addNewProduct() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void UpdateProduct() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void DeleteProduct() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getSalesDetails() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void notifyLowStock() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case RiseAndShopPackage.EMPLOYEE__NAME:
@@ -437,10 +279,6 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 				return getPassword();
 			case RiseAndShopPackage.EMPLOYEE__ROLE:
 				return getRole();
-			case RiseAndShopPackage.EMPLOYEE__CARTS:
-				return getCarts();
-			case RiseAndShopPackage.EMPLOYEE__NOTIFICATIONS:
-				return getNotifications();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -469,14 +307,6 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 			case RiseAndShopPackage.EMPLOYEE__ROLE:
 				setRole((String)newValue);
 				return;
-			case RiseAndShopPackage.EMPLOYEE__CARTS:
-				getCarts().clear();
-				getCarts().addAll((Collection<? extends Cart>)newValue);
-				return;
-			case RiseAndShopPackage.EMPLOYEE__NOTIFICATIONS:
-				getNotifications().clear();
-				getNotifications().addAll((Collection<? extends Notification>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -504,12 +334,6 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 			case RiseAndShopPackage.EMPLOYEE__ROLE:
 				setRole(ROLE_EDEFAULT);
 				return;
-			case RiseAndShopPackage.EMPLOYEE__CARTS:
-				getCarts().clear();
-				return;
-			case RiseAndShopPackage.EMPLOYEE__NOTIFICATIONS:
-				getNotifications().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -532,51 +356,8 @@ public class EmployeeImpl extends MinimalEObjectImpl.Container implements Employ
 				return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
 			case RiseAndShopPackage.EMPLOYEE__ROLE:
 				return ROLE_EDEFAULT == null ? role != null : !ROLE_EDEFAULT.equals(role);
-			case RiseAndShopPackage.EMPLOYEE__CARTS:
-				return carts != null && !carts.isEmpty();
-			case RiseAndShopPackage.EMPLOYEE__NOTIFICATIONS:
-				return notifications != null && !notifications.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case RiseAndShopPackage.EMPLOYEE___GET_PRODUCT_LOCATION:
-				getProductLocation();
-				return null;
-			case RiseAndShopPackage.EMPLOYEE___GET_STOCK_DETAILS:
-				getStockDetails();
-				return null;
-			case RiseAndShopPackage.EMPLOYEE___UPDATE_PRODUCT_QUANTITY:
-				UpdateProductQuantity();
-				return null;
-			case RiseAndShopPackage.EMPLOYEE___UPDATE_CATEGORY:
-				updateCategory();
-				return null;
-			case RiseAndShopPackage.EMPLOYEE___ADD_NEW_PRODUCT:
-				addNewProduct();
-				return null;
-			case RiseAndShopPackage.EMPLOYEE___UPDATE_PRODUCT:
-				UpdateProduct();
-				return null;
-			case RiseAndShopPackage.EMPLOYEE___DELETE_PRODUCT:
-				DeleteProduct();
-				return null;
-			case RiseAndShopPackage.EMPLOYEE___GET_SALES_DETAILS:
-				getSalesDetails();
-				return null;
-			case RiseAndShopPackage.EMPLOYEE___NOTIFY_LOW_STOCK:
-				notifyLowStock();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

@@ -63,23 +63,6 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_NHMMUNj7Ee6ZnfKJBgJ-Fg" name="role" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_ga4OENj8Ee6ZnfKJBgJ-Fg" name="carts" visibility="private" type="_h-ncQNj9Ee6ZnfKJBgJ-Fg">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x6hfUNj9Ee6ZnfKJBgJ-Fg"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x60aQNj9Ee6ZnfKJBgJ-Fg" value="*"/>
-    </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_jfq0wNj8Ee6ZnfKJBgJ-Fg" name="notifications" visibility="private" type="_oEj8QNj8Ee6ZnfKJBgJ-Fg">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gHrIwNj9Ee6ZnfKJBgJ-Fg"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2PYp8NkBEe6ZnfKJBgJ-Fg" value="*"/>
-    </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_a3iWwNj7Ee6ZnfKJBgJ-Fg" name="getProductLocation"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_gIKi4Nj7Ee6ZnfKJBgJ-Fg" name="getStockDetails"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_nb1k0Nj7Ee6ZnfKJBgJ-Fg" name="UpdateProductQuantity"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_2sr4sNj7Ee6ZnfKJBgJ-Fg" name="updateCategory"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_-0YYkNj7Ee6ZnfKJBgJ-Fg" name="addNewProduct"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_EibggNj8Ee6ZnfKJBgJ-Fg" name="UpdateProduct"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_IQwMYNj8Ee6ZnfKJBgJ-Fg" name="DeleteProduct"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_LCCBMNj8Ee6ZnfKJBgJ-Fg" name="getSalesDetails"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_IezZANkIEe6ZnfKJBgJ-Fg" name="notifyLowStock"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_oEj8QNj8Ee6ZnfKJBgJ-Fg" name="Notification">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_sc0V8Nj8Ee6ZnfKJBgJ-Fg" name="message" visibility="private">
@@ -315,6 +298,34 @@
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YMWy0NkPEe6ZnfKJBgJ-Fg"/>
     </ownedEnd>
     <ownedEnd xmi:type="uml:Property" xmi:id="_VpmiM9kPEe6ZnfKJBgJ-Fg" name="main" type="_tWrS8Nj4Ee6ZnfKJBgJ-Fg" association="_VpmiMNkPEe6ZnfKJBgJ-Fg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kHIloNp2Ee6a8baDzqvZvw" name="Superviser">
+    <generalization xmi:type="uml:Generalization" xmi:id="_cp9M8Np3Ee6a8baDzqvZvw" general="_wT3K4Nj6Ee6ZnfKJBgJ-Fg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_EibggNj8Ee6ZnfKJBgJ-Fg" name="UpdateProduct"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-0YYkNj7Ee6ZnfKJBgJ-Fg" name="addNewProduct"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IQwMYNj8Ee6ZnfKJBgJ-Fg" name="DeleteProduct"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_gIKi4Nj7Ee6ZnfKJBgJ-Fg" name="getStockDetails"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kqULMNp2Ee6a8baDzqvZvw" name="TeamLeader">
+    <generalization xmi:type="uml:Generalization" xmi:id="_fyZkkNp3Ee6a8baDzqvZvw" general="_wT3K4Nj6Ee6ZnfKJBgJ-Fg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_jfq0wNj8Ee6ZnfKJBgJ-Fg" name="notifications" visibility="private" type="_oEj8QNj8Ee6ZnfKJBgJ-Fg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gHrIwNj9Ee6ZnfKJBgJ-Fg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2PYp8NkBEe6ZnfKJBgJ-Fg" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_lJzjkNp2Ee6a8baDzqvZvw" name="Cashier">
+    <generalization xmi:type="uml:Generalization" xmi:id="_hA5_ENp3Ee6a8baDzqvZvw" general="_wT3K4Nj6Ee6ZnfKJBgJ-Fg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ga4OENj8Ee6ZnfKJBgJ-Fg" name="carts" visibility="private" type="_h-ncQNj9Ee6ZnfKJBgJ-Fg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_x6hfUNj9Ee6ZnfKJBgJ-Fg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_x60aQNj9Ee6ZnfKJBgJ-Fg" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IezZANkIEe6ZnfKJBgJ-Fg" name="notifyLowStock"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_lqywwNp2Ee6a8baDzqvZvw" name="Manager">
+    <generalization xmi:type="uml:Generalization" xmi:id="_gZZTINp3Ee6a8baDzqvZvw" general="_wT3K4Nj6Ee6ZnfKJBgJ-Fg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_a3iWwNj7Ee6ZnfKJBgJ-Fg" name="getProductLocation"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_2sr4sNj7Ee6ZnfKJBgJ-Fg" name="updateCategory"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_LCCBMNj8Ee6ZnfKJBgJ-Fg" name="getSalesDetails"/>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_UEs7kNj8Ee6ZnfKJBgJ-Fg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UEuJsNj8Ee6ZnfKJBgJ-Fg" source="http://www.eclipse.org/uml2/2.0.0/UML">

@@ -60,18 +60,22 @@ public class RiseAndShopFactoryImpl extends EFactoryImpl implements RiseAndShopF
 			case RiseAndShopPackage.DATABASE_UTILS: return createDatabaseUtils();
 			case RiseAndShopPackage.STORE: return createStore();
 			case RiseAndShopPackage.EMPLOYEE: return createEmployee();
-			case RiseAndShopPackage.CART: return createCart();
-			case RiseAndShopPackage.CART_ITEM: return createCartItem();
-			case RiseAndShopPackage.PAYMENT: return createPayment();
-			case RiseAndShopPackage.REVIEW: return createReview();
-			case RiseAndShopPackage.NOTIFICATION: return createNotification();
 			case RiseAndShopPackage.INVENTORY: return createInventory();
 			case RiseAndShopPackage.CATEGORIES: return createCategories();
 			case RiseAndShopPackage.PRODUCT: return createProduct();
 			case RiseAndShopPackage.SUPPLIER: return createSupplier();
 			case RiseAndShopPackage.EVENT: return createEvent();
+			case RiseAndShopPackage.NOTIFICATION: return createNotification();
+			case RiseAndShopPackage.CART: return createCart();
+			case RiseAndShopPackage.CART_ITEM: return createCartItem();
+			case RiseAndShopPackage.PAYMENT: return createPayment();
+			case RiseAndShopPackage.REVIEW: return createReview();
 			case RiseAndShopPackage.SALARY: return createSalary();
 			case RiseAndShopPackage.UTILS: return createUtils();
+			case RiseAndShopPackage.SUPERVISER: return createSuperviser();
+			case RiseAndShopPackage.TEAM_LEADER: return createTeamLeader();
+			case RiseAndShopPackage.CASHIER: return createCashier();
+			case RiseAndShopPackage.MANAGER: return createManager();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -240,6 +244,50 @@ public class RiseAndShopFactoryImpl extends EFactoryImpl implements RiseAndShopF
 	public Utils createUtils() {
 		UtilsImpl utils = new UtilsImpl();
 		return utils;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Superviser createSuperviser() {
+		SuperviserImpl superviser = new SuperviserImpl();
+		return superviser;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public TeamLeader createTeamLeader() {
+		TeamLeaderImpl teamLeader = new TeamLeaderImpl();
+		return teamLeader;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Cashier createCashier() {
+		CashierImpl cashier = new CashierImpl();
+		return cashier;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Manager createManager() {
+		ManagerImpl manager = new ManagerImpl();
+		return manager;
 	}
 
 	/**

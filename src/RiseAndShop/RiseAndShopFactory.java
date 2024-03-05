@@ -157,6 +157,42 @@ public interface RiseAndShopFactory extends EFactory {
 	Utils createUtils();
 
 	/**
+	 * Returns a new object of class '<em>Superviser</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Superviser</em>'.
+	 * @generated
+	 */
+	Superviser createSuperviser();
+
+	/**
+	 * Returns a new object of class '<em>Team Leader</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Team Leader</em>'.
+	 * @generated
+	 */
+	TeamLeader createTeamLeader();
+
+	/**
+	 * Returns a new object of class '<em>Cashier</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cashier</em>'.
+	 * @generated
+	 */
+	Cashier createCashier();
+
+	/**
+	 * Returns a new object of class '<em>Manager</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Manager</em>'.
+	 * @generated
+	 */
+	Manager createManager();
+
+	/**
 	 * Returns a new object of class '<em>Database Utils</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
