@@ -14,13 +14,4 @@ public interface UserRepository {
     Boolean check(String username);
 
     ArrayList<User> viewPeople();
-
-
-//    boolean add(String username, String name);
-//
-//    boolean drop(String username, String name);
-//
-//    boolean check(String username, String name);
-
-
 }

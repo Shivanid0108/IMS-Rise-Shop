@@ -6,8 +6,9 @@ import Utils.PrintUtil;
 import Utils.Utility;
 
 public class SupervisorUI {
-    private static final String[] SupervisorMenu = new String[]{"Supervisor Menu", "Account", "Modify Managers", "SignOut",};//TODO
-    private static final String[] ModifyManagerMenu = new String[]{"Modify Manager Menu", "View Employed Managers", "Employ a Manager", "Fire a manager", "Go Back"};
+    private static final String[] SupervisorMenu = new String[]{"Supervisor Menu", "Account", "Modify TeamLeaders", "View Notifications", "Modify Categories", "View All Products", "Show Events", "SignOut",};//TODO
+    private static final String[] ModifyTLMenu = new String[]{"Modify Team-Leader Menu", "View Employed Team-Leaders", "Employ a Team-Leader", "Fire a Team-Leader", "Go Back"};
+    private static final String[] ModifyProductMenu = new String[]{"Modify Products Menu", "View existing Products", "Add Product", "Delete Product", "Go Back"};
     private final String currentUser;
     private final UserService userService;
     private final Callback callback;
@@ -16,7 +17,7 @@ public class SupervisorUI {
         this.userService = userService;
         this.callback = callback;
     }
-    public void showSupervisorMenu(){
+    public void showSupervisorMenu(){//{"Account", "Modify TeamLeaders", "View Notifications", "Modify Categories", "View All Products", "Show Events", "SignOut",};//TODO
         boolean loopVar = true;
         while (loopVar) {
             final int c = Utility.printMenuAndGetValidInput(SupervisorMenu);

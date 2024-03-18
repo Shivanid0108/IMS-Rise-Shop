@@ -11,13 +11,10 @@ public class Utility {
     public static final String[] viewPostMenu = new String[]{"Post Menu", "Edit Post", "Delete Post", "Go Back"};
     public static final String[] retryMenu = new String[]{"Retry Menu", "Retry", "Go Back"};
     public static final String[] postMenu = new String[]{"Post Menu", "Add Post", "View Post", "Go Back"};
-
-
     public static int printMenuAndGetValidInput(String[] menuItems) {
         printMenu(menuItems);
         return readInteger();
     }
-
     public static int readInteger() {
         System.out.print("\nEnter : ");
         String c = sc.nextLine();
@@ -32,51 +29,7 @@ public class Utility {
         }
         return Integer.parseInt(c);
     }
-
-//    public static void printPosts(ArrayList<Post> posts) {
-//        if (posts.isEmpty()) {
-//            System.out.print("\nNo Posts/Feed to display");
-//        } else {
-//            System.out.print("\n------------------\nPosts :");
-//            for (Post post : posts) {
-//                post.print();
-//            }
-//            System.out.print("\n------------------");
-//        }
-//    }
-//
-//    public static void editPost(PostService postService, String username, int id) {
-//        Post post = new Post(username);
-//        post.setId(id);
-//        if (postService.checkPost(username, id) || postService.checkPostGroupAdmin(username, id)) {
-//            System.out.print("\nEnter the edited post : ");
-//            final String newpost = sc.nextLine();
-//            post.setPost(newpost);
-//            if (postService.editPost(post)) {
-//                System.out.print("\nPost edited successfully");
-//            } else {
-//                System.out.print("\nCould not edit the post");
-//            }
-//        } else {
-//            System.out.print("\nYou are neither the creator nor an admin of the group,if this post belongs to a group.Hence cannot edit");
-//        }
-//    }
-//
-//    public static void deletePost(PostService postService, String username, int id) {
-//        Post post = new Post(username);
-//        post.setId(id);
-//        if (postService.checkPost(username, id) || postService.checkPostGroupAdmin(username, id)) {
-//            if (postService.deletePost(post)) {
-//                System.out.print("\nPost deleted successfully");
-//            } else {
-//                System.out.print("\nCould not delete the post");
-//            }
-//        } else {
-//            System.out.print("\nYou are neither the creator nor an admin of the group,if this post belongs to a group.Hence cannot edit");
-//        }
-//    }
-
-    public static boolean isNotValidUsername(String name) {
+        public static boolean isNotValidUsername(String name) {
         String regex = "\\w{6,30}$";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(name);

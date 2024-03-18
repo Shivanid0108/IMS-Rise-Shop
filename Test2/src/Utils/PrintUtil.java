@@ -29,95 +29,33 @@ public class PrintUtil {
     public static void existUser() {
         System.out.print("\nUsername taken.Try a different username\nEnter : ");
     }
-
     public static void askPass() {
         System.out.print("\nEnter your password : ");
     }
-
     public static void notValidPass() {
         System.out.print("\nInvalid Password.Must contain one digit,one Lowercase character,one Upper case character,one special case character and must be between 8 to 20 characters in length.\nEnter again : ");
     }
-
     public static void wrongPass() {
         System.out.print("\nWrong Password.Try again");
     }
-
     public static void askDob() {
         System.out.print("\nEnter your date of birth(DD-MM-YYYY) : ");
     }
-
     public static void notValidDob() {
         System.out.print("\nNot a valid date.Format DD-MM-YY.use / or . or - for separation.Enter again : ");
     }
-
     public static void askBio() {
         System.out.print("\nEnter your bio : ");
     }
-
     public static void createdUser(String user) {
         System.out.print("\nUser " + user + " created successfully");
     }
-
     public static void signedIn(String username) {
         System.out.print("\nUser " + username + " successfully signed in.");
     }
-
     public static void userNotExist() {
         System.out.print("\nUsername entered does not exist.");
     }
-
-    public static void askPost() {
-        System.out.print("\nEnter the post : ");
-    }
-
-    public static void addPostSuccess() {
-        System.out.print("\nPost added successfully");
-    }
-
-    public static void addPostFail() {
-        System.out.print("\nError while adding Post");
-    }
-
-    public static void askPostId() {
-        System.out.print("\nEnter the post id to view");
-    }
-
-    public static void postNotExist() {
-        System.out.print("\nPost does not exist");
-    }
-
-    public static void noConnections() {
-        System.out.print("\nNo Connections exist.");
-    }
-
-    public static void noDelete() {
-        System.out.print("Cannot delete any");
-    }
-
-    public static void noRequests() {
-        System.out.print("\nNo Requests available");
-    }
-
-    public static void noSelf() {
-        System.out.print("\nCannot do Operation with/on Self");
-    }
-
-    public static void notGroupMember() {
-        System.out.print("\nYou are not a member of the group");
-    }
-
-    public static void groupNotExists() {
-        System.out.print("\nGroup does not exist");
-    }
-
-    public static void notConnection() {
-        System.out.print("\nYou are not Connected");
-    }
-
-    public static void notGroupAdmin() {
-        System.out.print("\nYou are not an Admin to this group");
-    }
-
     public static void signedOut() {
         System.out.print("\nSuccessfully Signed out");
     }
