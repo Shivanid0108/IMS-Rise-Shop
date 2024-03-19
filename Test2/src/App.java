@@ -1,9 +1,7 @@
 import Users.UserService;
 import Utils.PrintUtil;
 import Utils.Utility;
-import ui.AccountsUI;
-import ui.Callback;
-import ui.SupervisorUI;
+import ui.*;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -129,13 +127,13 @@ public class App {
                                 new SupervisorUI(userService, currentUser, callback).showSupervisorMenu();
                             }
                             case "Manager" -> {
-                                showManagerMenu();
+                                new ManagerUI(userService, currentUser, callback).showManagerMenu();
                             }
                             case "TeamLeader" -> {
-                                showTeamLeaderMenu();
+                                new TeamLeaderUI(userService, currentUser, callback).showTLMenu();
                             }
                             case "Cashier" -> {
-                                showCashierMenu();
+                                new CashierUI(userService, currentUser, callback).showCashierMenu();
                             }
                             default -> PrintUtil.invalidRole();
                         }

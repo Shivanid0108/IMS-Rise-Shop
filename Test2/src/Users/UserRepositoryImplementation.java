@@ -6,25 +6,12 @@ import java.util.ArrayList;
 
 public class UserRepositoryImplementation implements UserRepository {
     private static final String insert_user = "INSERT into users" + "(name,username,password,dob,bio) VALUES" + " (?,?,?,?,?);";
-    private static final String find_groups_admin = "Select name from groups where admin=\"%s\" ;";
-    private static final String delete_group = "DELETE from groups where name=\"%s\" ;";
-    private static final String delete_group_posts = "DELETE from posts where group_name=\"%s\" ;";
-    private static final String delete_posts = "DELETE from posts where username=\"%s\" ;";
-    private static final String remove_member = "UPDATE groups SET members=(SELECT REPLACE((SELECT members from groups where name=\"%s\"),\"%s,\",\"\")) where name=\"%s\";";
-    private static final String remove_friends = "UPDATE users SET friends=(SELECT REPLACE((SELECT friends from users where username=\"%s\"),\"%s,\",\"\")) where username=\"%s\";";
-    private static final String remove_requests = "UPDATE users SET requests=(SELECT REPLACE((SELECT requests from users where username=\"%s\"),\"%s,\",\"\")) where username=\"%s\";";
-    private static final String view_all_groups = "Select name from groups;";
     private static final String view_all_users = "Select username from users;";
     private static final String delete_user = "DELETE from users WHERE username=\"%s\";";
     private static final String check_user = "Select username from users where username=\"%s\";";
     private static final String signing_user = "Select password from users where username=\"%s\";";
     private static final String view_role = "Select role from users where username=\"%s\";";
-    private static final String view_friends = "SELECT friends from users where username=\"%s\" ;";
     private static final String view_users = "SELECT username,name,dob,bio from users;";
-    private static final String view_requests = "Select requests from users where username=\"%s\" ;";
-    private static final String update_requests = "UPDATE users SET requests=\"%s\" where username=\"%s\";";
-    private static final String update_friends = "UPDATE users SET friends=\"%s\" where username=\"%s\" ;";
-    private static final String check_request_exist = "Select requests from users where username=\"%s\" ;";
     private static final Connection connection = DatabaseUtils.getConnection();
 
     public UserRepositoryImplementation() throws SQLException {
@@ -50,25 +37,7 @@ public class UserRepositoryImplementation implements UserRepository {
     @Override
     public boolean delete(String username) {
         try (Statement st = connection.createStatement()) {
-            ResultSet rs = st.executeQuery(String.format(find_groups_admin, username));
-            while (rs.next()) {
-                String groupName = rs.getString("name");
-                st.execute(String.format(delete_group, groupName));
-                st.execute(String.format(delete_group_posts, groupName));
-            }
-            rs = st.executeQuery(view_all_groups);
-            while (rs.next()) {
-                String group = rs.getString("name");
-                st.execute(String.format(remove_member, group, username, group));
-            }
-            st.execute(String.format(delete_posts, username));
-            rs = st.executeQuery(view_all_users);
-            while (rs.next()) {
-                String name = rs.getString("username");
-                st.execute(String.format(remove_friends, name, username, name));
-                st.execute(String.format(remove_requests, name, username, name));
-            }
-            st.execute(String.format(delete_user, username));
+            ResultSet rs = st.executeQuery(String.format(delete_user, username));
             return true;
         } catch (SQLException e) {
             System.out.print("\n5 " + e.getMessage());
