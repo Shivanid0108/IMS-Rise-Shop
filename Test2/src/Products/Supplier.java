@@ -5,7 +5,7 @@ public class Supplier {
     private Integer id = -1;
     private String contactInfo = "";
 
-    Supplier(String name){
+    Supplier(String name) {
         this.name = name;
     }
 

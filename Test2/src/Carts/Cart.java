@@ -1,12 +1,11 @@
 package Carts;
 
-import Products.Product;
-
 public class Cart {
     private final Integer id;
     private CartItem[] cartItems = null;
     private Double subTotal = 0.0;
-    Cart(Integer id){
+
+    Cart(Integer id) {
         this.id = id;
     }
 

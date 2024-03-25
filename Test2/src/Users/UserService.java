@@ -9,9 +9,14 @@ public interface UserService {
 
     Boolean checkUser(String username);
 
+    Boolean checkUser(String username, String role);
+
     String signIn(String username, String pass);
 
     String getRole(String username);
+
     ArrayList<User> viewPeople();
+
+    ArrayList<User> viewRoleUsers(String role);
 
 }

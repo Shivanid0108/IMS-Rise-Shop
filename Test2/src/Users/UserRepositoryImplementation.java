@@ -1,14 +1,17 @@
 package Users;
 
 import Utils.DatabaseUtils;
+
 import java.sql.*;
 import java.util.ArrayList;
 
 public class UserRepositoryImplementation implements UserRepository {
-    private static final String insert_user = "INSERT into users" + "(name,username,password,dob,bio) VALUES" + " (?,?,?,?,?);";
+    private static final String insert_user = "INSERT into users" + "(name,username,password,dob,bio,role,salary) VALUES" + " (?,?,?,?,?,?,?);";
     private static final String view_all_users = "Select username from users;";
+    private static final String view_users_role = "Select * from users where role = \"%s\";";
     private static final String delete_user = "DELETE from users WHERE username=\"%s\";";
     private static final String check_user = "Select username from users where username=\"%s\";";
+    private static final String check_userRole = "Select username from users where username = \"%s\" and role = \"%s\";";
     private static final String signing_user = "Select password from users where username=\"%s\";";
     private static final String view_role = "Select role from users where username=\"%s\";";
     private static final String view_users = "SELECT username,name,dob,bio from users;";
@@ -26,6 +29,8 @@ public class UserRepositoryImplementation implements UserRepository {
             pst.setString(3, person.getPass());
             pst.setString(4, person.getDob());
             pst.setString(5, person.getBio());
+            pst.setString(6, person.getRole());
+            pst.setDouble(7, person.getSalary());
             pst.executeUpdate();
             return true;
         } catch (SQLException e) {
@@ -37,7 +42,7 @@ public class UserRepositoryImplementation implements UserRepository {
     @Override
     public boolean delete(String username) {
         try (Statement st = connection.createStatement()) {
-            ResultSet rs = st.executeQuery(String.format(delete_user, username));
+            st.executeUpdate(String.format(delete_user, username));
             return true;
         } catch (SQLException e) {
             System.out.print("\n5 " + e.getMessage());
@@ -76,6 +81,7 @@ public class UserRepositoryImplementation implements UserRepository {
         }
         return null;
     }
+
     @Override
     public Boolean check(String username) {
         try (Statement st = connection.createStatement()) {
@@ -88,6 +94,20 @@ public class UserRepositoryImplementation implements UserRepository {
         }
         return false;
     }
+
+    @Override
+    public Boolean check(String username, String role) {
+        try (Statement st = connection.createStatement()) {
+            ResultSet rs = st.executeQuery(String.format(check_userRole, username, role));
+            if (rs.next() && rs.getString("username").equals(username)) {
+                return true;
+            }
+        } catch (SQLException e) {
+            System.out.print("\n6 " + e.getMessage());
+        }
+        return false;
+    }
+
     @Override
     public ArrayList<User> viewPeople() {
         ArrayList<User> users = new ArrayList<>();
@@ -107,4 +127,22 @@ public class UserRepositoryImplementation implements UserRepository {
         return null;
     }
 
+    @Override
+    public ArrayList<User> viewRoleUsers(String role) {
+        ArrayList<User> users = new ArrayList<>();
+        try (Statement st = connection.createStatement()) {
+            ResultSet rs = st.executeQuery(String.format(view_users_role, role));
+            while (rs.next()) {
+                User user = new User(rs.getString("username"), rs.getString("role"), rs.getDouble("salary"));
+                user.setName(rs.getString("name"));
+                user.setDob(rs.getString("dob"));
+                user.setBio(rs.getString("bio"));
+                users.add(user);
+            }
+            return users;
+        } catch (SQLException | NullPointerException e) {
+            System.out.print("\n" + e.getMessage());
+        }
+        return null;
+    }
 }

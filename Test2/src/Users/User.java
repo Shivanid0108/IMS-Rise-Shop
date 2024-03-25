@@ -18,7 +18,8 @@ public class User {
         this.salary = salary;
 
     }
-    User(String username){
+
+    User(String username) {
         this.username = username;
     }
 
@@ -73,6 +74,7 @@ public class User {
     public void setRole(String role) {
         this.role = role;
     }
+
     public void print() {
         System.out.print("\n" + name + " | " + username + " | " + dob + " | " + bio + " | " + role + " | " + salary);
     }

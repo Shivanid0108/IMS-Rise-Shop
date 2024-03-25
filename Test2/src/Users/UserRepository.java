@@ -14,4 +14,8 @@ public interface UserRepository {
     Boolean check(String username);
 
     ArrayList<User> viewPeople();
+
+    ArrayList<User> viewRoleUsers(String role);
+
+    Boolean check(String username, String role);
 }

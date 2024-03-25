@@ -33,6 +33,11 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
+    public Boolean checkUser(String username, String role) {
+        return user.check(username, role);
+    }
+
+    @Override
     public String signIn(String username, String pass) {
         return user.signIn(username, pass);
     }
@@ -46,6 +51,11 @@ public class UserServiceImplementation implements UserService {
     @Override
     public ArrayList<User> viewPeople() {
         return user.viewPeople();
+    }
+
+    @Override
+    public ArrayList<User> viewRoleUsers(String role) {
+        return user.viewRoleUsers(role);
     }
 
 }
