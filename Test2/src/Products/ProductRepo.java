@@ -27,8 +27,8 @@ public interface ProductRepo {
     int getProductId(String name);
     ArrayList<Integer> viewCarts();
     ArrayList<CartItem> viewCartItems(int id);
-    public void updateCartTotal(String name, int id);
-    public void updateCartQuantity(String name, int id, int quantity);
+    void updateCartTotal(String name, int id);
+    void updateCartQuantity(String name, int id, int quantity);
 
     boolean updateAvailableQuantity(Integer id, Integer newQuantity);
     ArrayList<String> getCategories();

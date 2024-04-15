@@ -134,7 +134,6 @@ public class ManagerUI {
                     deleteCatProducts(name);
                     deleteCategory(name);
                 } else if (c.equals("N") || c.equals("n")) {
-                    return;
                 } else {
                     PrintUtil.invalidChoice();
                 }
