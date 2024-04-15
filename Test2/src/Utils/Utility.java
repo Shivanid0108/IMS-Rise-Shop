@@ -1,6 +1,9 @@
 package Utils;
 
 
+import Carts.Authorised;
+import Carts.Cart;
+import Carts.CartItem;
 import Products.Supplier;
 
 import java.util.ArrayList;
@@ -81,6 +84,24 @@ public class Utility {
         System.out.print("\nSuppliers: \nId\tName\tContactInfo\n");
         for(Supplier a:suppliers){
             System.out.println(a.getId()+" | "+a.getName()+" | "+a.getContactInfo());
+        }
+    }
+    public static void printCartItems(ArrayList<CartItem> cart){
+        if(!cart.isEmpty()) {
+            System.out.println("\nCart Items:\nId | Name | Quantity | Price | Total Price");
+            for (CartItem i : cart) {
+                System.out.println(i.getId() + " " + i.getName() + " | " + i.getQuantity() + " | " + i.getPrice() + " | " + i.getTotalPrice());
+            }
+        }else{System.out.println("\nThe cart is empty. Please add items");}
+    }
+    public static void printPayments(ArrayList<Authorised> list) {
+        if (!list.isEmpty()) {
+            System.out.println("\nAuthorised Payments:\nId | TotalPrice | Method");
+            for (Authorised i : list) {
+                System.out.println(i.getId() + " " + i.getTotal() + " | " + i.getMethod());
+            }
+        } else {
+            System.out.println("\nThere are no Authorised Payments");
         }
     }
 }

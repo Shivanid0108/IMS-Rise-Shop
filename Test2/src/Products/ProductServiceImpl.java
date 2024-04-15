@@ -1,5 +1,9 @@
 package Products;
 
+import Carts.Authorised;
+import Carts.Cart;
+import Carts.CartItem;
+
 import java.util.ArrayList;
 
 public class ProductServiceImpl implements ProductService {
@@ -18,6 +22,53 @@ public class ProductServiceImpl implements ProductService {
     }
     @Override
     public boolean deleteProduct(String name) {return product.deleteProduct(name);}
+
+    @Override
+    public boolean createCart() { return product.createCart();}
+    @Override
+    public boolean createCartItem(CartItem cartItem) {return product.createCartItem(cartItem);}
+
+    @Override
+    public boolean deleteCartItem(String name) {return product.deleteCartItem(name);}
+
+    @Override
+    public boolean productsExistsinCart(String name, int id) {
+        return product.productExistsinCart(name,id);
+    }
+
+    @Override
+    public int getCartItemQuantity(String name, int id) {
+        return product.getCartItemQuantity(name, id);
+    }
+
+    @Override
+    public boolean cartExists(int id) {
+        return product.cartExists(id);
+    }
+
+    @Override
+    public boolean authoriseCart(int id, Double total, String method) {
+        return product.authoriseCart(id, total, method);
+    }
+
+    @Override
+    public ArrayList<Authorised> viewAuthorised() {
+        return product.viewAuthorised();
+    }
+
+    @Override
+    public boolean deleteCart(int id) {return product.deleteCart(id);}
+
+    @Override
+    public ArrayList<CartItem> viewCartItems(int id) {return product.viewCartItems(id);}
+
+    @Override
+    public boolean cartNotEmpty(int id) {
+        return product.cartNotEmpty(id);
+    }
+
+    @Override
+    public ArrayList<Integer> viewCarts() {return product.viewCarts();}
 
     @Override
     public boolean updateAvailableQuantity(Integer id, Integer newQuantity) {
@@ -87,5 +138,25 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public boolean productExists(int id) {
         return product.productExists(id);
+    }
+
+    @Override
+    public String getProductName(int id) {
+        return product.getProductName(id);
+    }
+
+    @Override
+    public int getProductId(String name) {
+        return product.getProductId(name);
+    }
+
+    @Override
+    public Double getPrice(int id) {
+        return product.getPrice(id);
+    }
+
+    @Override
+    public Double getPrice(String name) {
+        return product.getPrice(name);
     }
 }

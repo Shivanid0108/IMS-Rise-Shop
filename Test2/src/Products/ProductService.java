@@ -1,5 +1,9 @@
 package Products;
 
+import Carts.Authorised;
+import Carts.Cart;
+import Carts.CartItem;
+
 import java.util.ArrayList;
 
 public interface ProductService {
@@ -8,7 +12,18 @@ public interface ProductService {
     boolean deleteProduct(Integer id);
 
     boolean deleteProduct(String name);
-
+    boolean createCart();
+    boolean createCartItem(CartItem cartItem);
+    boolean deleteCartItem(String name);
+    boolean productsExistsinCart(String name, int id);
+    int getCartItemQuantity(String name, int id);
+    boolean cartExists(int id);
+    boolean authoriseCart(int id, Double total, String method);
+    ArrayList<Authorised> viewAuthorised();
+    boolean deleteCart(int id);
+    ArrayList<CartItem> viewCartItems(int id);
+    boolean cartNotEmpty(int id);
+    ArrayList<Integer> viewCarts();
     boolean updateAvailableQuantity(Integer id, Integer newQuantity);
     Integer getQuantity(String name);
     Integer getQuantity(Integer id);
@@ -33,4 +48,8 @@ public interface ProductService {
     boolean productExists(String name);
 
     boolean productExists(int id);
+    String getProductName(int id);
+    int getProductId(String name);
+    Double getPrice(int id);
+    Double getPrice(String name);
 }

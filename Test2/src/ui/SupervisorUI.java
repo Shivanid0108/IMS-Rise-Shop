@@ -82,7 +82,7 @@ public class SupervisorUI {
         //TODO Notifs
     }
     private void viewAuthorisedPayments() {
-        //TODO payments
+        Utility.printPayments(productService.viewAuthorised());
     }
     private void viewAllSuppliers(){
         ArrayList<Supplier> suppliers = productService.getSuppliers();
